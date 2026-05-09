@@ -15,6 +15,7 @@ app.use(express.json());
 app.use(cors());
 
 // Mount all routes
+app.use(cors({ origin: true, credentials: true }));
 app.use("/api/auth", authRoutes);
 app.use("/api/tasks", taskRoutes);
 app.use("/api/expenses", expenseRoutes);
